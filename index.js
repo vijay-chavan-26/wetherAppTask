@@ -13,7 +13,7 @@ window.onscroll = function () {
   }
 };
 
-const apiKey = "2d6a98532f671d4d40994a2655eb8506"; // Replace with your own API key
+const apiKey = "Enter Your Key here"; // Replace with your own API key
 const city = "Pune";
 fetch(
   `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
