@@ -1,0 +1,323 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    background-color: #eee;
+}
+
+.blue{
+    color: rgb(29, 22, 228);
+}
+
+.animation-opacity {
+    animation-name: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+main {
+    position: relative;
+}
+
+/* section 1 styling */
+.section1 {
+    width: 100%;
+    height: 100vh;
+    background-image: url('img/section1background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section1 .navbar {
+    width: 30%;
+    margin: auto;
+}
+
+.section1 {
+    position: relative;
+}
+
+.section1>* {
+    position: relative;
+    z-index: 5;
+}
+
+.section1::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section1 .navbar a {
+    font-weight: 500;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+.section1 .navbar a:hover {
+    color: #777;
+}
+
+.section1 .wether_details {
+    width: 28rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 20%;
+    right: 10%;
+}
+
+.section1 .temp-details {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+.section1 .temp-details h1 {
+    font-size: 80px;
+}
+
+.section1 .temp-details #city {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.section1 .temp-details #date {
+    font-size: 20px;
+}
+
+@media (max-width: 550px) {
+    .section1 .wether_details {
+        width: 25rem;
+        right: 5%;
+    }
+
+    .section1 .navbar {
+        width: 70%;
+        margin: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .section1 .wether_details {
+        width: 20rem;
+        display: block;
+        margin: auto;
+    }
+
+    .section1 .temp-details h1 {
+        font-size: 60px;
+    }
+}
+
+/* section2 styling */
+
+.section2 .cards-container .card {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.section2 .cards-container .card:hover {
+    transform: scale(1.1);
+    transform-origin: bottom right;
+}
+
+.section2 .cards-container .card img {
+    width: 100%;
+    border-radius: 20px;
+    border-radius: 15px 15px 0 0;
+    object-fit: cover;
+    object-position: center;
+    height: 14rem;
+    position: relative;
+    content: 'Mumbai';
+}
+
+.section2 .cards-container .card .img-box {
+    position: relative;
+
+}
+
+.section2 .cards-container .card .img-box .img-title {
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.section2 .cards-container .card .temp-deg {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* section3 styling */
+.section3 .search-box{
+    height: 4rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.section3 .show-bg{
+    background-image: url('./img/universe.jpg');
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.section3 .show-bg::before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+
+.section3 .search-box img{
+    object-fit: cover;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    height: 2.8rem;
+}
+
+.input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.3rem;
+}
+
+/* section4 styling */
+
+
+.section4 .cards-container .card {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    border: none;
+    border-radius: 20px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.read-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    border: 2px solid white;
+    font-size: 1rem;
+    font-weight: 700;
+    z-index: 5;
+    display: none;
+}
+
+.read-btn:hover{
+    color: #fff;
+    border: 2px solid white;
+}
+
+.section4 .cards-container .card:hover::before {
+    border-radius: 22px;
+    width: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+}
+
+.section4 .cards-container .card:hover .img-title{
+    display: none;
+}
+
+.section4 .cards-container .card:hover .read-btn{
+    display: block;
+}
+
+.section4 .cards-container .card img {
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: center;
+    height: 25rem;
+    position: relative;
+}
+
+.section4 .cards-container .card .img-box {
+    position: relative;
+
+}
+
+.section4 .cards-container .card .img-box .img-title {
+    position: absolute;
+    bottom: 10%;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: white;
+}
+
+.section4 .cards-container .card .temp-deg {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+/* section5 styling */
+
+.section5{
+    background-color: #000;
+    width: 100%;
+    height: 15rem;
+}
+
+.section5 a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    display: block;
+}

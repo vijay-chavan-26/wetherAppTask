@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- custom js link -->
+    <script src="index.js" defer></script>
+
+    <title>MatrixLab - Task1</title>
+</head>
+
+<body>
+    <main>
+        <div class="section1 text-white" id="home">
+            <div class="navbar pt-4">
+                <a href="#home">home</a>
+                <a href="#cities">cities</a>
+                <a href="#news">news</a>
+            </div>
+
+            <div class="wether_details p-3 p-md-5">
+                <h4 class="mb-4">Weather Details</h4>
+                <div class="cloudy-box d-flex justify-content-between">
+                    <p class="cloudy">Cloudy</p>
+                    <p id="cloudy-temp"></p>
+                </div>
+                <div class="humidity-box d-flex justify-content-between">
+                    <p class="humidity">Humidity</p>
+                    <p id="humidity-temp"></p>
+                </div>
+                <div class="wind-box d-flex justify-content-between">
+                    <p class="wind">Wind</p>
+                    <p id="wind-temp"></p>
+                </div>
+            </div>
+
+            <div class="temp-details d-flex">
+                <h1 id="degree"></h1>
+                <div class="city-date ms-2 ms-md-5">
+                    <p id="city"></p>
+                    <p id="date"></p>
+                </div>
+                <img src="" alt="" height="150px" id="temp-img">
+            </div>
+        </div>
+
+        <div class="section2 my-5">
+            <h1 class="city-heading text-center mb-4 animation pb-3 blue" id="cities">Cities</h1>
+            <div class="cards-container row justify-content-center g-5 pb-5 animation">
+                <div class="col-8 col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img class="card-img-top" src="./img/thunder.jpg" alt="Card image cap">
+                            <p class="img-title">thunder</p>
+                        </div>
+                        <div class="card-body d-flex px-5 px-lg-4 justify-content-between">
+                            <p id="city1-temp-deg" class="temp-deg"></p>
+                            <div class="city-data">
+                                <h4 id="cityName1" class="city-name">Mumbai</h4>
+                                <p class="date"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img class="card-img-top" src="./img/cloudy.jpg" alt="Card image cap">
+                            <p class="img-title">cloudy</p>
+                        </div>
+                        <div class="card-body d-flex px-5 px-lg-4 justify-content-between">
+                            <p id="city2-temp-deg" class="temp-deg"></p>
+                            <div class="city-data">
+                                <h4 id="cityName2" class="city-name">Delhi</h4>
+                                <p class="date"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img class="card-img-top" src="./img/sunny.jpg" alt="Card image cap">
+                            <p class="img-title">sunny</p>
+                        </div>
+                        <div class="card-body d-flex px-5 px-lg-4 justify-content-between">
+                            <p id="city3-temp-deg" class="temp-deg"></p>
+                            <div class="city-data">
+                                <h4 id="cityName3" class="city-name">Chennai</h4>
+                                <p class="date"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section3 w-100 my-5 pt-5">
+            <div class="search-box col-10 col-lg-6 border mx-auto d-flex animation">
+                <input type="text" id="search" class="input w-100 px-5" placeholder="Search city">
+                <label for="search"><img src="./img/search.png" alt="search icon"></label>
+            </div>
+
+            <div class="show-bg my-5 animation"></div>
+        </div>
+
+
+        <div class="section4 my-5">
+            <h1 class="city-heading text-center mb-4 pb-3 blue animation" id="news">News</h1>
+            <div class="cards-container row justify-content-center g-5 animation">
+                <div class="col-8 col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img class="card-img-top" src="./img/thunder.jpg" alt="Card image cap">
+                            <button type="button" class="btn bg-transparent px-4 py-2 read-btn">Read More</button>
+                            <p class="img-title">Thunder Strikes Delhi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img class="card-img-top" src="./img/cloudy.jpg" alt="Card image cap">
+                            <button type="button" class="btn bg-transparent px-4 py-2 read-btn">Read More</button>
+                            <p class="img-title">Cloudstorms in Manipur</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8 col-lg-3">
+                    <div class="card">
+                        <div class="img-box">
+                            <img class="card-img-top" src="./img/sunny.jpg" alt="Card image cap">
+                            <button type="button" class="btn bg-transparent px-4 py-2 read-btn">Read More</button>
+                            <p class="img-title">It's Summer season in Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="pt-5">
+        <div class="section5 pt-5 d-grid">
+            <div class="container row justify-content-center animation">
+                <div class="logo col-12 col-md-5">
+                    <h1 class="text-white text-center animation">WETHERAPP</h1>
+                </div>
+                <div class="links d-flex col-12 col-md-5 justify-content-center">
+                    <div class="link1 me-4 animation">
+                        <a href="#home">home</a>
+                        <a href="#cities">cities</a>
+                        <a href="#news">news</a>
+                    </div>
+                    <div class="link1 animation">
+                        <a href="#contactus">contact us</a>
+                        <a href="#faqs">FAQs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
